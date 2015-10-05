@@ -22,3 +22,5 @@ To create a new repo, you need to go to your GitHUb profile page, click on the "
 I had a few problems with navigating around in git and getting used to not being able to physically "see" where I am on the computer with anything other than the text. I alos had trouble open sublime from within git using the "subl ." command. I assumed this was a previously created user configuration but I could not manage to get my config set up properly in Windows so I had to open Sublime separately and navigate to the folder there. In doing this though, I've memorized several of the shell commands and gotten more adept at moving around between and within directories using the 'cd', 'pwd', and 'ls' commands.
 
 testing to see if git sees modifications...
+
+new change at 2:39 pm Monday October 5, 2015
