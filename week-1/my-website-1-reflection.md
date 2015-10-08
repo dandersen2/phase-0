@@ -2,7 +2,7 @@
   Here's the repository:
   https://github.com/dandersen2/dandersen2.github.io
 
-  And here's the site:
+  And here's the site: testing
   https://dandersen2.github.io/
 
 ####Explain how to create a repository on GitHub and clone the repository to your local computer to a non-technical person.
