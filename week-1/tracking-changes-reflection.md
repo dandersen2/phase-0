@@ -1,11 +1,34 @@
 ####How does tracking and adding changes make developers' lives easier?
-  Using version control to track and add changes allows for the 
-What is a commit?
-What are the best practices for commit messages?
-What does the HEAD^ argument mean?
-What are the 3 stages of a git change and how do you move a file from one stage to the other?
-Write a handy cheatsheet of the commands you need to commit your changes?
-What is a pull request and how do you create and merge one?
-Why are pull requests preferred when working with teams?
+  Using version control to track and add changes allows for the developer to experiment with their code, make changes, test out new things, and debug without ever having to worry about losing the progress theyve previously worked so hard to make. At any time, they can revert to a previous commit as these are all saved within Version Control. Version Control is especially useful when collaborating with others on a single project because many different people can simultaneously make changes to the code. Each change is then "pushed" to a different branch of the master within the global repository. This allows for all of the different changes to various parts of the code to be "merged" into the master branch without overwriting each other like a simple "save" would do. This technology is enormously helpful for all knowledge workers including programmers, designers, and document writers.
 
-test testing again at 11:23  
+####What is a commit?
+  A commit is similar to saving a document in most other programs such as a word processor. It "commits" the changes to the local repository but instead of replacing the previous version of the file, a new ID is created for this commit that contains info on who made the change, when they made it, and what the changes were. A commit should be accompanied by a "commit message", which describes briefly the changes that were made and why.
+
+####What are the best practices for commit messages?
+  Generally, a commit message should describe the change that was made to the code so that you or other collaboraters can refer back to in the future to understand what the change was and why it was made. The actual changes in code, the date, and the user who made the changes are already recorded within Git when a commit is applied, so the "why" is the more important element of the commit message. Following specific styling guidelines in commit messages is also important. The first line of a commit message should be limited to 50 characters, be capitalized, NOT end in a period, and should contain a general summary of the changes that were made. This summary as well as the description should describe the change using the imperative verb form such as "fix bug" or "update article description" rather than "fixed bug" or "updated article description". This is so that the message describes the change that will be made by applying the commit and not what you already did. It also remains consistent with git generated message language such as "merge" and "rebase". If a more detailed description is required, one line should be skipped and the paragraph that follows should be limited to 72 characters. This is a convention that simply allows for messages to be more readable on most screens. The skipped line allows for these messages to be easily converted to emails with the summary as a subject and the description as the message body. If more than one paragraph is required, a line should also be skipped before beginning it.
+
+####What does the HEAD^ argument mean?
+  The HEAD^ or HEAD^1 argument is used to revert back to the last commit that you made. HEAD refers to the commit the you are currently on. To go back more than one commit, you can use HEAD^2 (commit before the last commit), HEAD^3 (three commits ago), and so on.
+  
+####What are the 3 stages of a git change and how do you move a file from one stage to the other?
+  The three most essential parts involved in a git change are editing, adding or "staging", and the commit. Editing involves the actual changes you are making to the file, which could be fixing a bug or adding a feature. Staging involves adding the file to your commit so that when the commit is applied, your changes will be saved. A file is said to be staged to commit if it has been added to the commit. This is accomplished using a "git add <file>" command. The third step is to commit your changes to the repo. This is done by using a "git commit -v" command or a "git commit -m "commit message here"" command. 
+
+####Write a handy cheatsheet of the commands you need to commit your changes:
+  git branch master                        --> Gets you to the master branch
+  git status                               --> Brings up current status
+  git pull                                 --> Makes sure you have the most up to date version from GitHub Repo
+  git checkout -b branch_name              --> Creates and moves to a new branch that you can work in safely
+  (Your work and changes here)             --> Fix whatever bugs you are working on or add new functionality
+  git add file_name                        --> Adds the file you modified to the current commit
+  git commit -m "commit message here"      --> Commits the changes to your current branch and adds a message description
+  git push origin branch_name              --> Pushes your new branch to the remote repo 
+  git checkout master                      --> Switches back to the master branch
+  git fetch origin master                  --> Fetches the master branch from GitHub to your computer
+  git merge origin/master                  --> merges fetched master branch from origin to your local master branch
+     * The last two steps can also be performed with one command: "git pull origin master"       
+
+####What is a pull request and how do you create and merge one?
+  A pull request is used to submit the changes you have made on your file or project up to GitHub. To create a pull request, you first need to have committed the changes to the branch that you are working on. Then you should push the branch that you are in up to the origin using "git push origin branch-name". Once this is done you should see a green button on Github, which says compare and pull request. Click on this to open the pull request and configure where you are pulling to. Then you choose the base fork that you want to pull your branch to. Note that in github, by default this may be the master, and you dont want to pull to the master. Instead choose your own fork with your username and pull and merge to the master branch within that fork. To do so, click the "create pull request" green button. The final step is to hit the button on the next screen which says "merge pull request" and then one more button that says "confirm merge". Once this is complete, you should have successfully merged your changes to the master branch on GitHub.
+####Why are pull requests preferred when working with teams?
+  Pull requests are preferred when working in teams because collaborators can propose changes to the master but the repository's owners have the final say in what changes are pulled and merged into their repo. For open source projects this is useful because anyone can contribute but not every change is automatically accepted. If this were the case, the owner would quickly lose control over the project and the site would most likely break down.
+
