@@ -1,5 +1,9 @@
 ####Paste a link to your [USERNAME].github.io repository.
+  Here's the repository:
   https://github.com/dandersen2/dandersen2.github.io
+
+  And here's the site: testing
+  https://dandersen2.github.io/
 
 ####Explain how to create a repository on GitHub and clone the repository to your local computer to a non-technical person.
   To creat a repo on GitHub, first click on the "+" icon in the top right corner of any page within the GitHub site once you're signed in. Select "New Repository" and create a name for you new repo. At this time you can also add a description of the repo, choose whetther to make it public or private, add a README file to it, and choose a license. Once you have configured your repo, click "Create Repository" to create it. 
