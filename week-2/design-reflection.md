@@ -5,3 +5,5 @@ What is the primary "action" the user should take when coming to your site? Do y
 What are the main things someone should know about design and user experience?
 What is user experience design and why is it valuable? 
 Which parts of the challenge did you find tedious?
+####My Site Map:
+  ![site-map.png](imgs/site-map.png "site-map.png")
