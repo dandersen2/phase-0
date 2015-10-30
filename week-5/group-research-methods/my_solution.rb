@@ -1,6 +1,6 @@
 # Research Methods
 
-# I spent [] hours on this challenge.
+# I spent 3 hours on this challenge.
 
 i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
 my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
@@ -184,6 +184,14 @@ We used .each to iterate over the input array in order to sort it.
 
 =end
 
+=begin
+TOOLS FOR NAVIGATING THE RUBY DOCS:
+  1) Break down the problem into as many small steps or processes as possible in your Pseudocode.
+  2) Step by step, move through your Pseudocode workflow and create the code for each process if you're able to do so.
+  3) When you get stuck on a particular process, research the classes or built-in Ruby methods that might be helpful in solving it.
+  4) When you come across a method that you think will be useful in your program, try experimenting with it in the terminal, using irb or the ruby interpreter. If it does not work as you expected, move onto step 5. If it does function and achieves the desired goal, move on to the next step in you pseudocode and begin again at step 3.
+  5) Search the Ruby docs (http://ruby-doc.org/) for the term or related terms for the method you want to learn more about, and read through the description and follow along with the example code that is provided.
+=end
 
 
 # Release 3: Reflect!
