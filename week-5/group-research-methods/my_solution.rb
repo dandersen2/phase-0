@@ -1,6 +1,8 @@
 # Research Methods
 
 # I spent 3 hours on this challenge.
+#
+# 5) Split Data: Dan Andersen and Bernice Chua (Accountability group 3)
 
 i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
 my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
