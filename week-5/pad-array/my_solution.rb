@@ -16,20 +16,24 @@
     # an array of any size greater than or equal to zero
 
     # What is the output? (i.e. What should the code return?)
-    # for pad!: output = if array length is greater than or equal to the minimum size, then the original array is outputted. If array is less than the minimum size, then the output will be an array with all of the contents of the original array plus padding to make the array longer.
+    # for pad!: output = if array length is greater than or equal to the minimum size, then the original array is outputted. If array is
+    # less than the minimum size, then the output will be an array with all of the contents of the original array plus padding to make the
+    # array longer.
     # for pad: output = Same as above but a new array will be outputted and original array still exists.
 
     # What are the steps needed to solve the problem?
 
     # PSEUDOCODE FOR "pad!":
     # 1) define a method called pad!
-    # 2) IF minimimum size is less than or equal to the length of "array", return "array"
-    # 3) If minimimum size is greater than the length of "array", "array" needs to be padded with x number of elements (where x = min_size - array length) whose value is equal to "value" (nil).
+    # 2) IF minimum size is less than or equal to the length of "array", return "array"
+    # 3) If minimum size is greater than the length of "array", "array" needs to be padded with x number of elements (where x = min_size -
+    # array length) whose value is equal to "value" (nil).
 
     # PSEUDOCODE FOR "pad" :
     # 1) define a method called "pad"
-    # 2) IF minimimum size is less than or equal to the length of "array", return "array"
-    # 3) If minimimum size is greater than the length of "array", a copy of "array" is created and then padded with x number of elements (where x = min_size - array length) whose value is equal to "value" (nil).
+    # 2) IF minimum size is less than or equal to the length of "array", return "array"
+    # 3) If minimum size is greater than the length of "array", a copy of "array" is created and then padded with x number of elements (
+    # where x = min_size - array length) whose value is equal to "value" (nil).
 
     #EXAMPLE: array = [1,2,3,4],  min_size = 6
 
@@ -66,4 +70,17 @@
 
 
 # 4. Reflection
+     # 1) Were you successful in breaking the problem down into small steps?
+
+     # 2) Once you had written your pseudocode, were you able to easily translate it into code? What difficulties and successes did you
+     #    have?
+
+     # 3) Was your initial solution successful at passing the tests? If so, why do you think that is? If not, what were the errors you
+     #    encountered and what did you do to resolve them?
+
+     # 4) When you refactored, did you find any existing methods in Ruby to clean up your code?
+
+     # 5) How readable is your solution? Did you and your pair choose descriptive variable names?
+
+     # 6) What is the difference between destructive and non-destructive methods in your own words?
 
