@@ -70,17 +70,23 @@
 
 
 # 4. Reflection
-     # 1) Were you successful in breaking the problem down into small steps?
+     # # 1) Were you successful in breaking the problem down into small steps?
+     #      Yes, this problem seemd especially importatn to break down into pieces.
 
-     # 2) Once you had written your pseudocode, were you able to easily translate it into code? What difficulties and successes did you
-     #    have?
+     # # 2) Once you had written your pseudocode, were you able to easily translate it into code? What difficulties and successes did you
+     # #    have?
+     #      Mostly, we had trouble with the syntax involved when translating our pseudocode into real functioning code. This required some extra research but after some help and reading we got it to work. The main steps in our pseudocode still applied though.
 
-     # 3) Was your initial solution successful at passing the tests? If so, why do you think that is? If not, what were the errors you
-     #    encountered and what did you do to resolve them?
+     # # 3) Was your initial solution successful at passing the tests? If so, why do you think that is? If not, what were the errors you
+     # #    encountered and what did you do to resolve them?
+     #      No, our initial solution was incorrect because we were not correctly contstructing an empty array for the non-destructive method. it was important to figure out how to do this on line 55 becasue a variable cannot point to another variable.
 
-     # 4) When you refactored, did you find any existing methods in Ruby to clean up your code?
+     # # 4) When you refactored, did you find any existing methods in Ruby to clean up your code?
+     #     We did not find any specifc methods for padding, but the .insert method seems to be another way to do this although it requiredthe same amount of code and isnt any more simple.
 
-     # 5) How readable is your solution? Did you and your pair choose descriptive variable names?
+     # # 5) How readable is your solution? Did you and your pair choose descriptive variable names?
+     #      Our variable and array names seem very clear based on what they represent in the method.
 
-     # 6) What is the difference between destructive and non-destructive methods in your own words?
+     # # 6) What is the difference between destructive and non-destructive methods in your own words?
+     #     destructive methods destroy the original input by replacing it with the newly manipulated data. non-destructive methods preserve the original data and create a new data set for the output.
 
