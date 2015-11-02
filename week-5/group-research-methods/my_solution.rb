@@ -1,72 +1,113 @@
 # Research Methods
-
+# (Accountability group 3)
 # I spent 3 hours on this challenge.
-#
-# 5) Split Data: Dan Andersen and Bernice Chua (Accountability group 3)
+
+# Person 1: (Syema Ailia)
+# Person 2: (Carolina Medellin)
+# Person 3: (James Artz)
+# Person 4: (Luis Fernando Plaz)
+# Person(s) 5: Split Data: Dan Andersen and Bernice Chua (Accountability group 3)
 
 i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
 my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
 
-# Person 1's solution
+# Person 1's solution(Syema Ailia)
 def my_array_finding_method(source, thing_to_find)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  new_array = []
+  source.each do |element|
+    if element.to_s.include?(thing_to_find)
+      new_array << element
+    end
+  end
+  new_array
 end
+
 
 def my_hash_finding_method(source, thing_to_find)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  age = []
+  source.each do |k, v|
+    if source[k] == thing_to_find
+      age << k
+    end
+  end
+  age
 end
 
-# Identify and describe the Ruby method(s) you implemented.
-#
-#
-#
 
-# Person 2
-def my_array_modification_method!(source, thing_to_modify)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+# Identify and describe the Ruby method(s) you implemented
+
+#I used .each do for both the array and the hash.
+
+# Teach your accountability group how to use the methods
+
+# The difference was that you can use two variables when using .each on the hash. The hash portion was definitely harder as I had to return an array. But just creating an empty array and appending the key to the new array helped.
+
+# Share any tricks you used to find and decipher the Ruby Docs
+
+# Checking Ruby Docs for methods on the array page and the hash page showed me what methods can be applied. I basically went through each of the examples on those pages that made the most sense to me.
+#
+#
+# Person 2(Carolina Medellin)
+def my_array_modification_method!(array,num)
+  array.each_index{|idx|
+    if array[idx].is_a?(Integer)
+      array[idx] += num
+    end
+    }
+end
+my_array_modification_method!(i_want_pets,2)
+
+def my_hash_finding_method(source, newage)
+  source.each do |name,age|
+    source[name] = (age += newage)
+  end
+  return source
 end
 
-def my_hash_modification_method!(source, thing_to_modify)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+# Person 3 (James Artz)
+def my_array_sorting_method(array)
+  array.sort_by { |element| element.to_s }
 end
 
-# Identify and describe the Ruby method(s) you implemented.
-#
-#
-#
 
-
-# Person 3
-def my_array_sorting_method(source)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+def my_hash_sorting_method(hash)
+  hash.sort_by { |pet, age| age }
 end
 
-def my_hash_sorting_method(source)
-   source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
-end
-
-# Identify and describe the Ruby method(s) you implemented.
+# Identify and describe the Ruby method(s) you implemented. => I used
+# .sort_by to sort the arrays and hashes in 'alphabetical' order -
+# i.e., for an array, numbers get returned before letters, capital
+# letters come before lowercase, a is lower than b, etc. For a hash,
+# the default is to sort by value, low to high, then return arrays
+# of key/value pairs organized accordingly. I added .to_s to the array
+# sorting method so that it would consider all the elements as strings
+# when it sorts them.
 #
 #
-#
 
 
-# Person 4
+# Person 4(Luis Fernando Plaz)
 def my_array_deletion_method!(source, thing_to_delete)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+
+return source.delete_if {|element| element == thing_to_delete}
+
 end
 
 def my_hash_deletion_method!(source, thing_to_delete)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+
+return source.keep_if {|element| element != thing_to_delete}
+
 end
 
+
 # Identify and describe the Ruby method(s) you implemented.
-#
-#
+# delete_if = deletes elements in the array that satisfy the condition.
+# keep_if = keeps elements in the array that satisfy the condition, deleteing those that dont.
 #
 
+
 # ________________________________________________________________________________
-# Person 5
+# Person 5: Bernice Chua & Dan Andersen
 
 =begin
 PSEUDOCODE:
