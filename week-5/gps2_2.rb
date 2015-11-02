@@ -82,16 +82,21 @@ print_list(list)
 Reflections:
 
   What did you learn about pseudocode from working on this challenge?
-    Pseudocode is important for guiding your thinking process once you reach the actual code part of the problem you are working on.
+    Pseudocode is important for guiding your thinking process once you reach the actual code part of the problem you are working on. Without a proper plan in place its easy to get off on a tangent or start solving problems that are more complicated than they need to be.
 
   What are the tradeoffs of using Arrays and Hashes for this challenge?
+    Arrays are useful for 1 dimensional lists of data that dont have any other values associated with them. Hashes are best in this case when you need to know an item as well as the quantity of it that you need to purchase or any other situation dealing with data that each have a correspondingn other piece of data that relates to them.
 
   What does a method return?
+    A method will only return what is on the last line of the code before it is ended. This is by default in Ruby but you can also explicitly tell a method to return a certain variable, array, or hash by using a return command within the method.
 
   What kind of things can you pass into methods as arguments?
+     You can pass in almost any type of obeject into a method including a variable, an integer, a string, a float, an array, or a hash. in the case of variables, local variables can only be used within that particular method if they are created inside of it.
 
   How can you pass information between methods?
+     you can pass information between methods by placing the data outside of it. You can also use instance variables of classes for working across methods but for our purposes now, keeping your data outside the methods will allow it to be manipulated by one method but still be used by another.
 
   What concepts were solidified in this challenge, and what concepts are still confusing?
+    setting a variable equal to another variable by creating an empty array or hash and then adding the first variable to it was the most important concept that i solidified in this assignment.
 
 
