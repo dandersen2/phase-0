@@ -1,8 +1,10 @@
 # Class Warfare, Validate a Credit Card Number
 
 
-# I worked on this challenge [by myself, with: ].
-# I spent [#] hours on this challenge.
+# I worked on this challenge by myself.
+# I spent 3 hours on this challenge.
+
+____________________________________________________________________________
 
 # Pseudocode
 
@@ -26,10 +28,11 @@ add the integers together, and if it is divisible by 10, then good job, and outp
 # [4,5,6,3,9,6,0,1,2,2,0,0,1,9,9,9]
 # NOTE: Dont set variables equal to OTHER variables!!
 
-
-
 # Don't forget to check on initialization for a card length
 # of exactly 16 digits
+
+__________________________________________________________________________________
+
 
 # class CreditCard
 #   def initialize(creditcard)
@@ -91,6 +94,8 @@ add the integers together, and if it is divisible by 10, then good job, and outp
 # # def check_card
 # # end
 
+________________________________________________________________________
+
 
 # Refactored Solution
 
@@ -143,6 +148,49 @@ class CreditCard
 end
 
   CreditCard.new(4563960122001999).check_card
+
+___________________________________________________________________________
+
+SECOND REFACTOR:
+class CreditCard
+  def initialize(creditcard)
+    @creditcard = creditcard
+    @strings_array.map! { |element| element.to_i }
+    raise ArgumentError.new("Not a valid number of digits") if @creditcard.to_s.length("") != 16
+  end
+
+  # If some particular method is more than 5 lines (roughly) it can probably be simplified or split up
+  # (&:to_i) {|ele|ele.to_i}
+  # No more than 5 periods in a method
+
+  def splitter
+    @strings_array = @creditcard.to_s.split("")
+
+
+  def timestwo
+    @multiplied_array = []
+    counter = 0
+      while counter < @creditcard.to_s.length
+      if counter.even?
+        @multiplied_array << @strings_array[counter]*2
+      else
+        @multiplied_array << @strings_array[counter]
+      end
+      counter += 1
+    end
+  end
+
+  def twodigitsplitter
+    split_array = []
+    @final_array = []
+    @multiplied_array.each do |number|
+      split_array << number.to_s.split("")
+    end
+      split_array.flatten.each do |element|
+      @final_array << element.to_i
+    end
+  end
+
   def digit_sum
     total = @final_array.inject("+")
     if total % 10 == 0
@@ -159,8 +207,9 @@ end
   end
 end
 
-CreditCard.new(4563960122001998).check_card
+  CreditCard.new(4563960122001999).check_card
 
-
+________________________________________________________________________________
 
 # Reflection
+

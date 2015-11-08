@@ -1,6 +1,6 @@
 # Your Names
 # 1) Dan Andersen
-# 2)
+# 2) Tal
 
 # We spent [#] hours on this challenge.
 
