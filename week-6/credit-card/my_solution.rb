@@ -1,8 +1,8 @@
 # Class Warfare, Validate a Credit Card Number
 
 
-# I worked on this challenge by myself.
-# I spent 3 hours on this challenge.
+# I worked on this challenge with Scott Chou.
+# I spent 5 hours on this challenge.
 
 ____________________________________________________________________________
 
