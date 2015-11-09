@@ -1,6 +1,7 @@
 # RELEASE 2: NESTED STRUCTURE GOLF
 
 # I worked on this assignment with Walter Kerr
+# I spent about 1.5 hours on this assignment
 
 # RELEASE 2: NESTED STRUCTURE GOLF
 # Hole 1
@@ -70,19 +71,33 @@ number_array = [5, [10, 15], [20,25,30], 35]
 
 startup_names = ["bit", ["find", "fast", ["optimize", "scope"]]]
 
-
 p startup_names.flatten.map { |element| element + "ly"}
+# This was by far the simplest way we could find of doing this. Some combination of our
+# method on lines 63-67 would also work with the strings.
 
 # attempts: 1
 
-REFLECTIONS:
+# REFLECTIONS:
 
-What are some general rules you can apply to nested arrays?
+# QUESTION: What are some general rules you can apply to nested arrays?
+#     ANSWER: the rules that govern arrays and hashes can be applied in the same way to nested
+#     arrays that they are applied to one-dimensional arrays. If you want to iterate through
+#     all elements and sub-elements of an array, you can either flatten the outermost array and
+#     work with the elements individually or you can iterate through the aouter array followed
+#     by any sub-arrays followed by any sub-sub-arrays, and so on until you reach the inner-most
+#     level. Using the kind_of? or is_a? (Array) methods allows the interpreter to tell if a sub
+#     element is another array or just a value so that it can decide whether to iterate through it.
 
 
-What are some ways you can iterate over nested arrays?
+# QUESTION: What are some ways you can iterate over nested arrays?
+#     ANSWER: See Question 1
 
 
-Did you find any good new methods to implement or did you re-use one you were already familiar with? What was it and why did you decide that was a good option?
+# QUESTION: Did you find any good new methods to implement or did you re-use one you were
+# already familiar with? What was it and why did you decide that was a good option?
+#     ANSWER: the .each iterator is very useful in these cases as well as .map because they
+#     both are array methods. the kind_of? and is_a? methods were good for determining the
+#     data type of sub-arrays. The .flatten method is also useful on arrays to make iterating
+#     over them less complex.
 
 
