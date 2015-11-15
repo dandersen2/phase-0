@@ -74,3 +74,15 @@ console.log( separateComma( 4192482489027 ) );
 
 
 // Reflection
+
+QUESTION: What was it like to approach the problem from the perspective of JavaScript? Did you approach the problem differently?
+  ANSWER: It was interesting to pseudocode with the goal of coding in another language in mind because I noticed which words and concepts still apply sort of universally to both Ruby and Javascript but are still specific enough to be helpful. I approached the problem in the same general way though, creating functions instead of methods, making local variables, and iterating over data structures.
+
+QUESTION: What did you learn about iterating over arrays in JavaScript?
+  ANSWER:
+
+QUESTION: What was different about solving this problem in JavaScript?
+  ANSWER:
+
+QUESTION: What built-in methods did you find to incorporate in your refactored solution?
+  ANSWER:
