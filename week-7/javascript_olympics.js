@@ -80,13 +80,20 @@ console.log(michaelPhelps.name + " " + michaelPhelps.sport + " " + michaelPhelps
 // vs. that of Ruby. We also needed to learn some new skills such as the
 // constructor function and the use of "this." as well as splitting, reversing,
 // joining methods, and logging to the console. These are all things we had
-// previously done in Ruby but are slightly differnt in js.
+// previously done in Ruby but are slightly different in js.
 
-QUESTION: What are constructor functions?
-  ANSWER:  A constructor function is
+// QUESTION: What are constructor functions?
+//   ANSWER:  A constructor function is a way of creating an object other
+//   than with the object literal notation. They use the keyword "this."
+//   to declare property names and values. eg: this.eyeColor = "Blue" instead
+//   of Dan { eyeColor : "Blue"} when referring to the object "Dan"
 
-QUESTION: How are constructors different from Ruby classes (in your research)?
-  ANSWER:
+// QUESTION: How are constructors different from Ruby classes (in your
+//   research)?
+//   ANSWER: They are similar in the way that they ar instantiated using
+//   the .new syntax but they differ from the behavior of Ruby classes
+//   because they do not inherit the properties of the "class" when they
+//   are created.
 
 
 
