@@ -83,7 +83,7 @@ console.log(michaelPhelps.name + " " + michaelPhelps.sport + " " + michaelPhelps
 // previously done in Ruby but are slightly differnt in js.
 
 QUESTION: What are constructor functions?
-  ANSWER:
+  ANSWER:  A constructor function is
 
 QUESTION: How are constructors different from Ruby classes (in your research)?
   ANSWER:
