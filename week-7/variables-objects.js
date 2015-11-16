@@ -5,10 +5,14 @@
 // __________________________________________
 // Write your code below.
 
-var secretNumber = 7
-var password = "just open the door"
-var allowedIn = false
-var members = ["John","Charlie","Bill","Mary"]
+var secretNumber = 10;
+secretNumber = 7;
+
+var password = "just open the door";
+
+var allowedIn = false;
+
+var members = ["John","Charlie","Bill","Mary"];
 
 
 
