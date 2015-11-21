@@ -1,7 +1,7 @@
 /*
 Gradebook from Names and Scores
 I worked on this challenge with Carolina Medellin
-This challenge took me [#] hours.
+This challenge took me 4 hours.
 You will work with the following two variables.  The first, students, holds the names of four students.
 The second, scores, holds groups of test scores.  The relative positions of elements within the two
 variables match (i.e., 'Joseph' is the first element in students; his scores are the first value in scores.).
@@ -63,21 +63,11 @@ var gradebook = {
 // __________________________________________
 // Refactored Solution
 
-for(var i =0; i < students.length; i++){
-  gradebook.students[i]={testScores: scores[i],
-                        addScore: function(name, score){
-                          this.name = name
-                          this.score = score
-                          gradebook[name].testScores.push(score);
-                        },
-                        getAverage: function(name){
-                          this.name = name
-                          return average(gradebook[name].testScores);
-  }
-
-
-
-
+// so this seems to work. the only thing left for you to fix is test 9
+// setScores() creates a property for each student and gives it the proper value, and only needs to be called once, unless a new student and his or her grades is added to students and scores, respectively. then setScores() can be called again.
+// getScores() returns the array of scores for the given student
+// :D
+// - nil
 
 var students = ["Joseph", "Susan", "William", "Elizabeth"]
 
@@ -87,57 +77,83 @@ var scores = [ [81, 70, 70, 100], // Joseph's scores
               [100, 90, 95, 85] ] // Elizabeth's scores
 
 var average = function(integers){
-  integers = integers.reduce((a, b) => a + b)/(integers.length);
-  return integers;
+  var mean = integers.reduce((a, b) => a + b)/(integers.length);
+  return mean;
 };
 
 var gradebook = {
 
-  getScore: function(){
-    this.students = students
-    this.scores = scores
-    for (var i = 0; i < students.length; i++){
-      students[i] = {testScores: scores[i][i]};
-      return gradebook.students[i];
-      return testScores;
+  getScores: function(student_name){
+    // returns a student's scores
+    return this[student_name].testScores;
+    },
+
+  //loop (length of students array) times and each time add a new property with the student’s name as the key and the value being another object with testScores as the key and an array of ints as its value
+  setScores: function(students_array, scores_array) {
+    for (var i = 0; i < students_array.length; i++) {
+      this[students_array[i]] = {testScores: scores_array[i]};
     }
-    // for (var i = 0; i < students.length; i++){
-      // students[i]: {testScores: scores[i]}
-      // Object.defineProperty(gradebook, students[i], {testScores: scores[i]})
-      // gradebook.students[i] = {testScores: scores[i]}
-      // return gradebook.students[i]
-      // return testScores: scores[i];
-    // }
   },
+
   addScore: function(name, score){
     this.name = name
     this.score = score
-    gradebook[name].testScores.push(score);
+    this[name].testScores.push(score);
   },
+
   getAverage: function(name){
-    // this.students = students
-    // this.scores = scores
-    this.name = name
-    return average(gradebook.getScore(students, scores).testScores);
+    return average(gradebook.getScores(name));
   }
 };
 
-console.log(students)
-console.log(scores)
+// create the student objects
+gradebook.setScores(students, scores);
+console.log("gradebook contains: ");
+console.log(gradebook);
+
+// get Joseph's scores
+console.log("Joseph's scores: " + gradebook.getScores("Joseph"));
+
+// get Joseph's average
+console.log("Joseph's average: " + gradebook.getAverage("Joseph"));
+
+// console.log(students)
+// console.log(scores)
 // console.log(gradebook.students[0])
 // console.log(gradebook.students[1])
 // console.log(gradebook.students[2])
 // console.log(gradebook.students[3])
+// console.log(gradebook.getScore(students, scores))
+// console.log(gradebook.getAverage("Joseph"));
+// console.log(gradebook.getAverage("Susan"));
+// console.log(gradebook.getAverage("William"));
+// console.log(gradebook.getAverage("Elizabeth"));
 
-console.log(gradebook.getAverage("Joseph"));
-console.log(gradebook.getAverage("Susan"));
-console.log(gradebook.getAverage("William"));
-console.log(gradebook.getAverage("Elizabeth"));
+//   I'm using getScore to try to refactor the objects and properties we were given:
+      // Joseph: {
+      //   testScores: scores[0]
+      // },
+      // Susan: {
+      //   testScores: scores[1]
+      // },
+      // William: {
+      //   testScores: scores[2]
+      // },
+      // Elizabeth: {
+      //   testScores: scores[3]
+      // },
+//   So that getScore will go and grab them from "students" and "scores" and make them into
+//   objects and properties & values. Any ideas?
+//   Currently, my "average" function cant run 'reduce' on  (gradebook.getScore.testScores) because it is undefined (from line 47).
 
+// [name] in brackets takes the value of nmae, not a variable named "name"
 
+// (gradebook.getAverage("Joseph") === 80),
 
+// average([1,2,3]);
 
-
+ // gradebook.addScore("Susan", 80);
+ // would push the score 80 into the value of gradebook.Susan.testScores.
 
 // __________________________________________
 // Reflect
