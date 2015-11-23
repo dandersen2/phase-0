@@ -16,65 +16,48 @@ var scores = [ [80, 70, 70, 100],
                [100, 90, 95, 85] ]
 
 
-
-
-
-
 // __________________________________________
 // Write your code below.
 
-var students = ["Joseph", "Susan", "William", "Elizabeth"]
+// var students = ["Joseph", "Susan", "William", "Elizabeth"]
 
-var scores = [ [80, 70, 70, 100], // Joseph's scores
-              [85, 80, 90, 90], // Susan's scores
-              [75, 70, 80, 75], // William's scores
-              [100, 90, 95, 85] ] // Elizabeth's scores
+// var scores = [ [80, 70, 70, 100], // Joseph's scores
+//               [85, 80, 90, 90], // Susan's scores
+//               [75, 70, 80, 75], // William's scores
+//               [100, 90, 95, 85] ] // Elizabeth's scores
 
-var average = function(integers){
-  integers = integers.reduce((a, b) => a + b)/(integers.length);
-  return integers;
-};
+// var average = function(integers){
+//   integers = integers.reduce((a, b) => a + b)/(integers.length);
+//   return integers;
+// };
 
-var gradebook = {
-  Joseph: {
-    testScores: scores[0]
-  },
-  Susan: {
-    testScores: scores[1]
-  },
-  William: {
-    testScores: scores[2]
-  },
-  Elizabeth: {
-    testScores: scores[3]
-  },
-  addScore: function(name, score){
-    this.name = name
-    this.score = score
-    gradebook[name].testScores.push(score);
-  },
-  getAverage: function(name){
-    this.name = name
-    return average(gradebook[name].testScores);
-  }
-};
+// var gradebook = {
+//   Joseph: {
+//     testScores: scores[0]
+//   },
+//   Susan: {
+//     testScores: scores[1]
+//   },
+//   William: {
+//     testScores: scores[2]
+//   },
+//   Elizabeth: {
+//     testScores: scores[3]
+//   },
+//   addScore: function(name, score){
+//     this.name = name
+//     this.score = score
+//     gradebook[name].testScores.push(score);
+//   },
+//   getAverage: function(name){
+//     this.name = name
+//     return average(gradebook[name].testScores);
+//   }
+// };
 
 
 // __________________________________________
 // Refactored Solution
-
-// so this seems to work. the only thing left for you to fix is test 9
-// setScores() creates a property for each student and gives it the proper value, and only needs to be called once, unless a new student and his or her grades is added to students and scores, respectively. then setScores() can be called again.
-// getScores() returns the array of scores for the given student
-// :D
-// - nil
-
-var students = ["Joseph", "Susan", "William", "Elizabeth"]
-
-var scores = [ [81, 70, 70, 100], // Joseph's scores
-              [83, 80, 90, 90], // Susan's scores
-              [75, 70, 80, 75], // William's scores
-              [100, 90, 95, 85] ] // Elizabeth's scores
 
 var average = function(integers){
   var mean = integers.reduce((a, b) => a + b)/(integers.length);
@@ -89,6 +72,7 @@ var gradebook = {
     },
 
   //loop (length of students array) times and each time add a new property with the student’s name as the key and the value being another object with testScores as the key and an array of ints as its value
+
   setScores: function(students_array, scores_array) {
     for (var i = 0; i < students_array.length; i++) {
       this[students_array[i]] = {testScores: scores_array[i]};
@@ -129,23 +113,6 @@ console.log("Joseph's average: " + gradebook.getAverage("Joseph"));
 // console.log(gradebook.getAverage("William"));
 // console.log(gradebook.getAverage("Elizabeth"));
 
-//   I'm using getScore to try to refactor the objects and properties we were given:
-      // Joseph: {
-      //   testScores: scores[0]
-      // },
-      // Susan: {
-      //   testScores: scores[1]
-      // },
-      // William: {
-      //   testScores: scores[2]
-      // },
-      // Elizabeth: {
-      //   testScores: scores[3]
-      // },
-//   So that getScore will go and grab them from "students" and "scores" and make them into
-//   objects and properties & values. Any ideas?
-//   Currently, my "average" function cant run 'reduce' on  (gradebook.getScore.testScores) because it is undefined (from line 47).
-
 // [name] in brackets takes the value of nmae, not a variable named "name"
 
 // (gradebook.getAverage("Joseph") === 80),
@@ -158,22 +125,32 @@ console.log("Joseph's average: " + gradebook.getAverage("Joseph"));
 // __________________________________________
 // Reflect
 
+/*
 QUESTION: What did you learn about adding functions to objects?
-  Answer:  I
+  Answer:  I learned how to add a function as a property of an object.
+  These function properties can also call upon other functions within
+  the object and from outside of it like in the case of calling the
+  average function, which is a var that is declared outside of the
+  gradebook object.
+
 
 QUESTION: How did you iterate over nested arrays in JavaScript?
-  Answer:  I
-
-QUESTION: Were there any new methods you were able to incorporate? If so, what were they and how did they work?
-  Answer:  I
-
-
+  Answer:  We used a for loop to iterate through the students array.
+  By creating an index var i, and incrementing i by one with each
+  iteration, we were able to set the students scores in setScores
+  using the data from the two input arrays.
 
 
 
+QUESTION: Were there any new methods you were able to incorporate?
+If so, what were they and how did they work?
+  Answer:  I found the .reduce method to be an easy way to
+  calculate an average from an array of numbers. By using
+  integers.reduce((a, b) => a + b)/(integers.length);  we were
+  able to calculate the sum across the array and then divide by
+  the length to calculate the mean.
 
-
-
+*/
 
 // __________________________________________
 // Test Code:  Do not alter code below this line.
@@ -187,8 +164,6 @@ function assert(test, message, test_number) {
   console.log(test_number + "true");
   return true;
 }
-
-
 
 assert(
   (gradebook instanceof Object),
