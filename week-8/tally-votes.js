@@ -26,16 +26,21 @@ student who received the most votes. */
 // This challenge took us 2 hours.
 
 // Pseudocode
+
 /*
+
 Tests 1-8: Bob needs to receive three votes for President.
 ITERATE through the "var votes" list (outermost hash).
-  FOR each students' votes, increment the value of the hash belonging to the candidate. If the candidate does not have a key, one must be created. If the candidate does have a key for that office already, the value associated with that key must be incremented by 1 in the voteCount object.
+  FOR each students' votes, increment the value of the hash belonging to
+  the candidate. If the candidate does not have a key, one must be created.
+  If the candidate does have a key for that office already, the value
+  associated with that key must be incremented by 1 in the voteCount object.
 
 After all votes have been tallied in voteCount,
 
-ITERATE through voteCount and locate the candidate who recieved the most votes for ech office and send them to the property for that office in "var officers".
-
-
+ITERATE through voteCount and locate the candidate who received the most
+votes for each office and send them to the property for that office in
+"var officers".
 
 
 */
@@ -89,6 +94,8 @@ var officers = {
 // __________________________________________
 // Initial Solution
 
+/*
+
 function voteCounter(office) {
   for (var voter in votes) {
     var candidate = (votes[voter][office]);
@@ -116,7 +123,6 @@ function winner(name) {
 }
 
 
-
 // voteCounter("president")
 // console.log("------------------------")
 // voteCounter("vicePresident")
@@ -141,20 +147,65 @@ console.log(officers)
 // var d = Math.max(-5, -10);
 // var e = Math.max(1.5, 2.5);
 
-
+*/
 // __________________________________________
 // Refactored Solution
 
+function voteCounter(office) {
+  for (var voter in votes) {
+    var candidate = (votes[voter][office]);
+    if(voteCount[office].hasOwnProperty(candidate)){
+      voteCount[office][candidate] += 1;
+    }
+    else {
+      voteCount[office][candidate] = 1;
+    }
+  }
+}
 
+function winner(name) {
+  for (var office in voteCount) {
+   var currentWinner = 0;
+    for (var candidate in voteCount[office]) {
+      if (voteCount[office][candidate] > currentWinner){
+      currentWinner = voteCount[office][candidate];
+      officers[office] = candidate;
+      }
+    };
+  };
+}
 
-
-
+voteCounter("president")
+voteCounter("vicePresident")
+voteCounter("secretary")
+voteCounter("treasurer")
+winner()
+console.log(officers)
 
 // __________________________________________
 // Reflection
+/*
 
+QUESTION: What did you learn about iterating over nested objects
+in JavaScript?
+  ANSWER: I learned how to use the for..in iteration method
+  within JS to iterate through a data structure using a key of
+  that object as the current iterator. We were able to implement
+  a for loop within a for loop to iterate through each element
+  of an array within an object as well. This same principle could
+  be applied to any level of nested structures.
 
+QUESTION: Were you able to find useful methods to help you with this?
+  ANSWER: The for..in method along with the hasOwnProperty method
+  was useful in evaluating the properties of an object.
 
+QUESTION: What concepts were solidified in the process of working
+through this challenge?
+  ANSWER: I feel more comfortable with accessing a particular
+  element with an array or object in JS as well as iterating through
+  them and manipulating the properties and values of objects.
+
+*/
 
 
 
