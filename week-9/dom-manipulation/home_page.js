@@ -1,7 +1,8 @@
 // DOM Manipulation Challenge
 
 
-// I worked on this challenge [by myself, with: ].
+// I worked on this challenge with Luis Plaz
+// We worked on this challenge for 1.5 hours
 
 
 // Add your JavaScript calls to this page:
