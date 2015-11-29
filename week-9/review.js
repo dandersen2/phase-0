@@ -38,13 +38,23 @@ groceries.removeItem("milk");
 groceries.printList();
 
 
-Reflections:
-QUESTION: What concepts did you solidify in working on this challenge? (reviewing the passing of information, objects, constructors
-  , etc.)
-  Answer: In this assignment, I was able to refresh myself on the use of constructor functions and manipulating data structures in JS. I was also able to figure out how to use the prototype command, which I dont fully understand but I now have a basic idea of how to use it.
+// Reflections:
+// QUESTION: What concepts did you solidify in working on this challenge?
+// (reviewing the passing of information, objects, constructors
+//   , etc.)
+//   Answer: In this assignment, I was able to refresh myself on the
+//   use of constructor functions and manipulating data structures
+//   in JS. I was also able to figure out how to use the prototype
+//   command, which I don't fully understand but I now have a basic
+//   idea of how to use it.
 
-QUESTION: What was the most difficult part of this challenge?
-  Answer: I needed to review quite a bit to get the constructor functions to work with the prototype command.
+// QUESTION: What was the most difficult part of this challenge?
+//   Answer: I needed to review quite a bit to get the constructor
+//   functions to work with the prototype command.
 
-QUESTION: Did an array or object make more sense to use and why?
-  Answer: Using an object seems easier to use in this particular example in JS because it seems easierto make changes to the object than it is to mkae changes to an array in JS. ALthough I think both could work, but would change the structure of the code significantly if I were to use an array.
+// QUESTION: Did an array or object make more sense to use and why?
+//   Answer: Using an object seems easier to use in this particular
+//   example in JS because it seems easier to make changes to the object
+//   than it is to make changes to an array in JS. ALthough I think
+//   both could work, but would change the structure of the code
+//   significantly if I were to use an array.
