@@ -1,6 +1,6 @@
-# Create a Bingo Scorer (SOLO CHALLENGE)
-
-# I spent [#] hours on this challenge.
+# Create a Bingo Scorer
+# I worked on this challenge with Amaar Fazlani
+# I spent 2.5 hours on this challenge.
 
 # Pseudocode
 # 1) Input array will consist of 5 2-digit numbers 00-99
