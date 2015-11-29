@@ -50,12 +50,19 @@ var tmpl = document.getElementById('hidden');
 document.body.appendChild(tmpl.content.cloneNode(true));
 
 // Reflections:
-/*
 
-QUESTION: What did you learn about the DOM?
-  Answer:  I
 
-QUESTIONS: What are some useful methods to use to manipulate the DOM?
-  Answer:  I
+// QUESTION: What did you learn about the DOM?
+//   Answer:  I learned how to "grab" elements by their ID using
+//   the getElementById and getElementByClassName DOM commands.
+//   Using the name of the element and the index (which instance
+//   of that element for the case of a class that appears multiple
+//   times in the document) we were able to access and manipulate
+//   the HTML dynamically using JS.
 
-  */
+// QUESTIONS: What are some useful methods to use to manipulate the DOM?
+//   Answer:  The getElementById and getElementByClassName DOM
+//   commands as well as appendChild and getElementsByTagName were
+//   very useful as long as the .js file can be found by the html file.
+
+

@@ -8,12 +8,12 @@
 # 1) Horizontal Checker:
 #   Accept the input array and iterate over it:
 #     FOR each row within the bingo board:
-#       FOR each element within that row, check to see if the number equals X (number at equivalent           location on bingo_board)
+#       FOR each element within that row, check to see if the number equals X (number at equivalent location on bingo_board)
 #         IF current element is equal to X, add 1 to COUNTER and move on to next element
 #         ELSE move on to next element
 #       return true or false: TRUE if counter = 5, False if counter != 5
 #         (NOTE: True = horizontal Bingo)
-#     Return true or false after runnning inner 'for' loop
+#     Return true or false after running inner 'for' loop
 
 # 2) Vertical Checker:
 #   Accept the input array and flatten into a 1 dimensional array:
@@ -23,7 +23,7 @@
 #         ELSE move on to next element
 #       return true or false: TRUE if bingo_counter = 5, False if counter != 5
 #         (NOTE: True = vertical Bingo)
-#     Return true or false after runnning inner 'for' loop
+#     Return true or false after running inner 'for' loop
 
 # 3) Diagonal Checker:
 #   Accepts the input array  index 0, index 6, 13, 21, 30 (Left to right), index 4, 8, 12, 16, 20
@@ -48,7 +48,7 @@
 # i + 5
 
 # for i in (0..4) # (0 checks 0,5,10,15,20)(1 checks 1,6,11,16,21)(2 checks 2,7,12,17,22)
-#   for (var j=i; j<board.length; j+5)
+#   for (var j = i; j < board.length; j + 5)
 #     board[j] = x?
 #     counter +=1
 
@@ -82,11 +82,6 @@ right_to_left = [[47, 44, 71, 8, 'x'],
                   [83, 85, 'x', 89, 57],
                   [25, 'x', 96, 68, 51],
                   ['x', 70, 54, 80, 83]]
-
-
-
-
-
 
 
 # # Initial Solution
@@ -179,35 +174,5 @@ horiz.winDiagonal
 # end
 
 
-
-#     winHorizontal(horizontal)
-
-# Initial Solution
-# class BingoScorer
-
-  #your code here
-
-# end
-
-# def winHorizontal(board)
-#   i = 0
-#   for i in (0..4) do
-#     # print board[i]
-#     counter = 0
-#     each_number = 0
-#     for each_number in (0..4) do
-#       # print board[i][each_number]
-#       if board[i][each_number] == 'x'
-#         counter += 1
-#       end
-#     end
-#     if counter == 5
-#       print "BINGO!"
-#     end
-#       # print counter
-#   end
-# end
-
-#     winHorizontal(horizontal)
 
 
