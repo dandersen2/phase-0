@@ -173,6 +173,31 @@ horiz.winHorizontal
 horiz.winDiagonal
 # end
 
+# Reflections:
+# QUESTION: What concepts did you review in this challenge?
+#   Answer:  In this challenge we reviewed many of the important
+#   core concepts from Ruby including creating and using classes,
+#   using instance variables, using a for..in loop, using while loops,
+#   if/else conditional statements, iterating through arrays, the
+#     .flatten method, and then using driver code to run our methods
+#     and test that the code is working.
+
+# QUESTION: What is still confusing to you about Ruby?
+#   Answer:  I was still pretty confused when trying to access
+#   arrays and access values within nested data structures like we
+#   did on line 124 where we are in a loop within a loop, trying to
+#   access a value in an array within an array, but I think at this
+#   point I'm ok with that process being a little confusing because I
+#   think its an objectively complicated part of this challenge. We
+#   managed to get it to run correctly after some tweaking and testing
+#   and without too much trouble though.
+
+# QUESTION: What are you going to study to get more prepared for Phase 1?
+#   Answer:  I am studying different ways to use classes using the
+#   .method syntax and how variables with classes determine their scope.
+#   Classes and objects(in JS) are still the hardest parts for me at
+#   this point.
+
 
 
 
